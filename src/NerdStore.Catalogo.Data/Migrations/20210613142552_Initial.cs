@@ -29,7 +29,7 @@ namespace NerdStore.Catalogo.Data.Migrations
                     Nome = table.Column<string>(type: "varchar(250)", nullable: false),
                     Descricao = table.Column<string>(type: "varchar(500)", nullable: false),
                     Ativo = table.Column<bool>(nullable: false),
-                    Valor = table.Column<decimal>(nullable: false),
+                    Valor = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
                     DataCadastro = table.Column<DateTime>(nullable: false),
                     Imagem = table.Column<string>(type: "varchar(250)", nullable: false),
                     QuantidadeEstoque = table.Column<int>(nullable: false),
