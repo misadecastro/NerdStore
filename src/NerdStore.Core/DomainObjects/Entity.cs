@@ -28,10 +28,9 @@ namespace NerdStore.Core.DomainObjects
                 return true;
 
             if (ReferenceEquals(a, null) || ReferenceEquals(b, null))
-                return true;
+                return false;
 
             return a.Equals(b);
-
         }
 
         public static bool operator !=(Entity a, Entity b)
