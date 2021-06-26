@@ -1,11 +1,10 @@
 ﻿using NerdStore.Core.DomainObjects;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace NerdStore.Catalogo.Domain
 {
-    public class Produto: Entity, IAggregateRoot
+    public class Produto : Entity, IAggregateRoot
     {
         public Guid CategoriaId { get; private set; }
         public string Nome { get; private set; }
@@ -75,7 +74,7 @@ namespace NerdStore.Catalogo.Domain
         }
     }
 
-    public class Categoria: Entity
+    public class Categoria : Entity
     {
         public string Nome { get; private set; }
         public int Codigo { get; private set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NerdStore.WebApp.MVC.Controllers.Admin
 {
-    public class AdminProdutosController: Controller
+    public class AdminProdutosController : Controller
     {
         private readonly IProdutoAppService _produtoAppService;
 
@@ -52,7 +52,7 @@ namespace NerdStore.WebApp.MVC.Controllers.Admin
             produtoViewModel.QuantidadeEstoque = produto.QuantidadeEstoque;
             ModelState.Remove("QuantidadeEstoque");
             if (!ModelState.IsValid) return View(await PopularCategorias(produtoViewModel));
-            
+
             await _produtoAppService.AtualizarProduto(produtoViewModel);
 
             return RedirectToAction("Index");
