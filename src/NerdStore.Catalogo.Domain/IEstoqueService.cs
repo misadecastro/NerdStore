@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NerdStore.Core.DomainObjects.DTO;
+using System;
 using System.Threading.Tasks;
 
 namespace NerdStore.Catalogo.Domain
@@ -8,5 +9,7 @@ namespace NerdStore.Catalogo.Domain
         Task<bool> DebitarEstoque(Guid produtoId, int quantidade);
 
         Task<bool> ReporEstoque(Guid produtoId, int quantidade);
+
+        Task<bool> DebitarListaProdutosPedido(ListaProdutosPedido lista);
     }
 }
